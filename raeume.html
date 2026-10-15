@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Räume – Yoga am Hofgarten Augsburg | Räumlichkeiten mieten</title>
+<meta name="description" content="Der Yogaraum und Aufenthaltsraum bei Yoga am Hofgarten. Auch für eigene Veranstaltungen, Seminare und Workshops buchbar." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Nunito+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .intro-rooms{background:var(--cream);text-align:center}
+  .intro-rooms p{max-width:720px;margin:0 auto;color:var(--brown-soft);font-size:1.1rem}
+
+  .gallery-section{background:var(--cream-warm);padding:5rem 2.5rem}
+  .gallery{
+    max-width:1300px;margin:0 auto;
+    display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;
+  }
+  .gallery-item{
+    overflow:hidden;cursor:pointer;background:var(--brown);
+    position:relative;
+  }
+  .gallery-item img{
+    width:100%;height:100%;object-fit:cover;
+    transition:transform .7s ease;
+  }
+  .gallery-item:hover img{transform:scale(1.06)}
+  .g-tall{grid-row:span 2}
+  .g-wide{grid-column:span 2}
+  .g1{aspect-ratio:1/1}
+  .g-tall.g1{aspect-ratio:1/2.05}
+  .g-wide.g1{aspect-ratio:2.05/1}
+
+  .room-feature{background:var(--cream);padding:0}
+  .room-grid{
+    display:grid;grid-template-columns:1fr 1fr;align-items:stretch;min-height:550px;
+  }
+  .room-img{background:center/cover no-repeat}
+  .room-content{
+    padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;
+    background:var(--cream);
+  }
+  .room-content h2{color:var(--brown)}
+  .room-content p{color:var(--brown-soft)}
+  .room-features{
+    list-style:none;margin-top:1.5rem;
+    display:grid;grid-template-columns:1fr 1fr;gap:.7rem 1.5rem;
+  }
+  .room-features li{
+    padding:.6rem 0;color:var(--brown);font-size:.95rem;
+    display:flex;align-items:center;gap:.7rem;
+  }
+  .room-features li::before{
+    content:'';width:5px;height:5px;background:var(--terracotta);border-radius:50%;flex-shrink:0;
+  }
+  .reverse .room-img{order:2}
+  .reverse .room-content{order:1;background:var(--cream-warm)}
+
+  .rent-cta{
+    background:var(--brown);color:var(--cream);text-align:center;padding:6rem 2rem;
+    background-image:radial-gradient(ellipse at top,rgba(197,150,74,.12),transparent 60%);
+  }
+  .rent-cta h2{color:var(--cream);font-style:italic}
+  .rent-cta .eyebrow{color:var(--ocker)}
+  .rent-cta .divider::before{background:var(--brown);color:var(--ocker)}
+  .rent-cta p{color:rgba(243,233,219,.85);max-width:700px;margin:0 auto 2rem;font-size:1.1rem}
+
+  .uses{background:var(--cream)}
+  .uses-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem;
+  }
+  .use-item{
+    padding:2rem 1.5rem;text-align:center;
+    border:1px solid var(--line);background:var(--cream-warm);
+    transition:all .3s;
+  }
+  .use-item:hover{background:var(--terracotta);color:var(--cream)}
+  .use-item:hover h3{color:var(--cream)}
+  .use-item h3{
+    font-size:1.2rem;color:var(--brown);
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+  }
+
+  @media(max-width:900px){
+    .gallery{grid-template-columns:repeat(2,1fr)}
+    .g-wide{grid-column:span 2}
+    .g-tall{grid-row:span 1}
+    .g-tall.g1{aspect-ratio:1/1}
+    .room-grid{grid-template-columns:1fr}
+    .room-img{min-height:400px}
+    .room-content{padding:3rem 2rem}
+    .reverse .room-img{order:0}
+    .reverse .room-content{order:0}
+    .room-features{grid-template-columns:1fr}
+    .uses-grid{grid-template-columns:1fr 1fr}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Yoga <span>am</span> Hofgarten</a>
+    <button class="burger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">Studio</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="kurse.html" >Kurse</a></li>
+        <li><a href="raeume.html"class="active">Räume</a></li>
+        <li><a href="mode.html">Mode</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <div class="container">
+    <div class="eyebrow">Räumlichkeiten</div>
+    <h1>Ein Ort zum Ankommen</h1>
+    <div class="breadcrumb"><a href="index.html">Startseite</a> <span>/</span> Räume</div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro-rooms">
+  <div class="container">
+    <div class="eyebrow">Willkommen</div>
+    <h2>Warme Erdtöne, mediterrane Ruhe</h2>
+    <div class="divider" style="margin:1.8rem auto 2.2rem"></div>
+    <p>Mitten in Augsburg, direkt am Hofgarten und wenige Schritte vom Dom entfernt: ein liebevoll gestalteter Yogaraum und ein Aufenthaltsraum, in denen jedes Detail auf Ruhe und Achtsamkeit ausgerichtet ist.</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+  <div class="gallery">
+    <div class="gallery-item g-tall g1"><img src="image/Yoga-Raum1.png" alt="Yogaraum – Hauptansicht" /></div>
+    <div class="gallery-item g1"><img src="image/Yoga-Raum2.png" alt="Yogaraum – Detail" /></div>
+    <div class="gallery-item g1"><img src="image/Yoga-Raum3.png" alt="Yogaraum – Ambiente" /></div>
+    <div class="gallery-item g-wide g1"><img src="image/Yoga-Raum4.png" alt="Yogaraum – Abendlicht" /></div>
+    <div class="gallery-item g1"><img src="image/Yoga-Raum5.png" alt="Yogaraum – Meditation" /></div>
+    <div class="gallery-item g1"><img src="image/Aufenthaltsraum.png" alt="Aufenthaltsraum" /></div>
+    <div class="gallery-item g1"><img src="image/Toilette.png" alt="Sanitärbereich" /></div>
+  </div>
+</section>
+
+<!-- YOGARAUM -->
+<section class="room-feature">
+  <div class="room-grid">
+    <div class="room-img" style="background-image:url('image/Yoga-Raum1.png')"></div>
+    <div class="room-content">
+      <div class="eyebrow">Der Yogaraum</div>
+      <h2>Herzstück des Studios</h2>
+      <div class="divider"></div>
+      <p>Ein großzügiger, ruhiger Raum – gestaltet für kleine Gruppen von maximal fünf Teilnehmer*innen. Warme Farben, weiches Licht und liebevoll ausgewählte Details schaffen eine Atmosphäre, in der man wirklich ankommt.</p>
+      <ul class="room-features">
+        <li>Max. 5 Matten</li>
+        <li>Tageslicht & warmes Ambiente</li>
+        <li>Alle Materialien vor Ort</li>
+        <li>Ruhige Lage am Hofgarten</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- AUFENTHALT -->
+<section class="room-feature reverse">
+  <div class="room-grid">
+    <div class="room-img" style="background-image:url('image/Aufenthaltsraum.png')"></div>
+    <div class="room-content">
+      <div class="eyebrow">Der Aufenthaltsraum</div>
+      <h2>Zum Ankommen & Verweilen</h2>
+      <div class="divider"></div>
+      <p>Ein gemütlicher Raum mit kleiner Küche und Bar – ideal für ein Gespräch vor oder nach der Stunde, für Umkleide und Vorbereitung. Ruhig, warm und einladend.</p>
+      <ul class="room-features">
+        <li>Kleine Küche & Bar</li>
+        <li>Umkleidebereich</li>
+        <li>Toilette & Sanitär</li>
+        <li>Warme Atmosphäre</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- RENT CTA -->
+<section class="rent-cta">
+  <div class="container">
+    <div class="eyebrow">Räume mieten</div>
+    <h2>Für Ihre Veranstaltung</h2>
+    <div class="divider" style="margin:1.5rem auto 2rem"></div>
+    <p>Die Räumlichkeiten bei Yoga am Hofgarten können für eigene Veranstaltungen gebucht werden – ein besonderer Ort für Seminare, Vorträge und Workshops.</p>
+    <a href="tel:+491632617777" class="btn btn-light">0163 26 17 777</a>
+  </div>
+</section>
+
+<!-- USES -->
+<section class="uses">
+  <div class="container">
+    <div class="eyebrow center">Perfekt geeignet für</div>
+    <h2 class="center">Vielseitige Nutzung</h2>
+    <div class="divider" style="margin:1.8rem auto 2.2rem"></div>
+
+    <div class="uses-grid">
+      <div class="use-item"><h3>Yoga & Pilates</h3></div>
+      <div class="use-item"><h3>Seminare</h3></div>
+      <div class="use-item"><h3>Vorträge</h3></div>
+      <div class="use-item"><h3>Osteopathie</h3></div>
+      <div class="use-item"><h3>Heilpraktik</h3></div>
+      <div class="use-item"><h3>Meditation</h3></div>
+      <div class="use-item"><h3>Workshops</h3></div>
+      <div class="use-item"><h3>Schulungen</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>Yoga am Hofgarten</h3>
+      <p>Ein Ort der Stille und Achtsamkeit im Herzen von Augsburg. Seit 2012 spezialisiert auf Rückengesundheit.</p>
+    </div>
+    <div>
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="index.html">Studio</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="kurse.html" class="active">Kurse</a></li>
+        <li><a href="raeume.html">Räume</a></li>
+        <li><a href="mode.html">Mode</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Adresse</h4>
+      <p>Alte Gasse 1<br>86152 Augsburg</p>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <p>Anja Cavallar<br><a href="tel:+491632617777">0163 26 17 777</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 Yoga am Hofgarten · Alle Rechte vorbehalten</div>
+    <div>
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+      <a href="#">AGB</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('nav a').forEach(a=>{
+    a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open'));
+  });
+</script>
+
+</body>
+</html>

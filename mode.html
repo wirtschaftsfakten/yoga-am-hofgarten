@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mode aus Ibiza – ES VEDRA Yoga & Fashion</title>
+<meta name="description" content="ES VEDRA Yoga & Fashion – hochwertige Yogawear und Lifestyle-Pieces aus Ibiza. Direkt im Studio Yoga am Hofgarten erhältlich." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Nunito+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .fashion-intro{background:var(--cream);text-align:center}
+  .fashion-intro p{max-width:700px;margin:0 auto;color:var(--brown-soft);font-size:1.1rem}
+
+  .collection{background:var(--cream-warm)}
+  .collection-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;margin-top:3rem;
+  }
+  .collection-item{
+    background:var(--cream);overflow:hidden;
+    box-shadow:0 10px 30px rgba(56,43,39,.08);
+    transition:all .35s;
+  }
+  .collection-item:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(56,43,39,.15)}
+.item-img{
+  aspect-ratio:1/1.2;
+  background:#e0d9cd;
+  overflow:hidden;
+}
+.item-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+  .item-content{padding:2rem 1.5rem}
+  .item-content h3{color:var(--brown);font-size:1.3rem;margin-bottom:.5rem}
+  .item-label{
+    font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--terracotta);margin-bottom:1rem;
+  }
+  .item-content p{color:var(--brown-soft);font-size:.95rem;margin:0}
+
+  .philosophy-fashion{
+    background:var(--brown);color:var(--cream);padding:0;
+  }
+  .philosophy-fashion-grid{
+    display:grid;grid-template-columns:1fr 1fr;align-items:stretch;min-height:500px;
+  }
+  .philosophy-fashion-img{
+    background:url('images/Hero-Banner.png') center/cover;
+  }
+  .philosophy-fashion-text{
+    padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;
+  }
+  .philosophy-fashion-text h2{color:var(--cream);font-style:italic}
+  .philosophy-fashion-text .eyebrow{color:var(--ocker)}
+  .philosophy-fashion-text p{color:rgba(243,233,219,.85)}
+
+  .story-section{background:var(--cream)}
+  .story-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;
+  }
+  .story-text h2{color:var(--brown)}
+  .story-text p{color:var(--brown-soft)}
+  .story-values{
+    list-style:none;margin-top:1.5rem;
+  }
+  .story-values li{
+    padding:.8rem 0;color:var(--brown);
+    display:flex;align-items:center;gap:1rem;
+    font-size:.95rem;
+  }
+  .story-values li::before{
+    content:'✦';color:var(--ocker);flex-shrink:0;font-size:.8rem;
+  }
+
+  .cta-fashion{
+    background:var(--cream-warm);text-align:center;
+  }
+  .cta-fashion p{max-width:600px;margin:0 auto;color:var(--brown-soft);font-size:1.1rem}
+
+  @media(max-width:900px){
+    .collection-grid{grid-template-columns:1fr 1fr}
+    .philosophy-fashion-grid{grid-template-columns:1fr}
+    .philosophy-fashion-img{min-height:350px}
+    .philosophy-fashion-text{padding:3rem 2rem}
+    .story-grid{grid-template-columns:1fr;gap:3rem}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Yoga <span>am</span> Hofgarten</a>
+    <button class="burger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">Studio</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="kurse.html" >Kurse</a></li>
+        <li><a href="raeume.html">Räume</a></li>
+        <li><a href="mode.html" class="active">Mode</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <div class="container">
+    <div class="eyebrow">Mode aus Ibiza</div>
+    <h1>ES VEDRA Yoga & Fashion</h1>
+    <div class="breadcrumb"><a href="index.html">Startseite</a> <span>/</span> Mode</div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="fashion-intro">
+  <div class="container">
+    <div class="eyebrow">Willkommen</div>
+    <h2>Hochwertige Yogawear & Lifestyle</h2>
+    <div class="divider" style="margin:1.8rem auto 2.2rem"></div>
+    <p>ES VEDRA bringt die entspannte Eleganz Ibizas in dein Zuhause und auf die Yogamatte. Sorgfältig ausgewählte Pieces für einen bewussten Lebensstil – erhältlich direkt im Studio.</p>
+  </div>
+</section>
+
+<!-- COLLECTION -->
+<section class="collection">
+  <div class="container">
+    <div class="eyebrow center">Kollektion</div>
+    <h2 class="center">Sorgfältig ausgewählt</h2>
+    <div class="divider" style="margin:1.8rem auto 2.2rem"></div>
+
+    <div class="collection-grid">
+      <div class="collection-item">
+        <img src="image/Kleid1.png" alt="Anja Cavallar" />
+        <div class="item-content">
+          <div class="item-label">Yoga & Wellness</div>
+          <h3>Premium Yogawear</h3>
+          <p>Hochwertige, nachhaltige Stoffe für die Yogapraxis – atmungsaktiv, bequem, elegant.</p>
+        </div>
+      </div>
+      <div class="collection-item">
+        <img src="image/Kleid2.png" alt="Anja Cavallar" />
+        <div class="item-content">
+          <div class="item-label">Lifestyle</div>
+          <h3>Loungewear & Basics</h3>
+          <p>Raffinierte Basics und Loungewear für einen bewussten Alltag – in perfekten Farben.</p>
+        </div>
+      </div>
+      <div class="collection-item">
+        <img src="image/kleid3.png" alt="Anja Cavallar" />
+        <div class="item-content">
+          <div class="item-label">Accessoires</div>
+          <h3>Details & Schmuck</h3>
+          <p>Liebevoll ausgewählte Accessoires – von Yoga-Taschen bis zu zeitlosen Schmuckstücken.</p>
+        </div>
+      </div>
+      <div class="collection-item">
+        <img src="image/kleid4.png" alt="Anja Cavallar" />
+        <div class="item-content">
+          <div class="item-label">Wohnen</div>
+          <h3>Home & Deko</h3>
+          <p>Schöne Dinge für dein Zuhause – Kissen, Decken und Dekoratives im ES VEDRA-Style.</p>
+        </div>
+      </div>
+      <div class="div class="item-img"">
+        <img src="image/kleid5.png" alt="Anja Cavallar" />
+        <div class="item-content">
+          <div class="item-label">Körperpflege</div>
+          <h3>Beauty & Wellness</h3>
+          <p>Hochwertige Naturprodukte für Körper und Seele – handverlesen aus nachhaltigen Quellen.</p>
+        </div>
+      </div>
+      <div class="collection-item">
+        <img src="image/kleid6.png" alt="Anja Cavallar" />
+        <div class="item-content">
+          <div class="item-label">Saisonal</div>
+          <h3>Limited Editions</h3>
+          <p>Exklusive Pieces aus limitierten Serien – saisonal wechselnd, immer besonders.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy-fashion">
+  <div class="philosophy-fashion-grid">
+    <div class="philosophy-fashion-img"></div>
+    <div class="philosophy-fashion-text">
+      <div class="eyebrow">Die Idee</div>
+      <h2>Ibiza trifft Augsburg</h2>
+      <div class="divider" style="margin:1.5rem 0 2rem"></div>
+      <p>ES VEDRA ist mehr als eine Modekollektion – es ist eine Philosophie. Die Gelassenheit Ibizas, die Qualität europäischer Handwerkskunst und der Geist von Achtsamkeit vereinen sich in jedem Piece.</p>
+      <p style="margin-top:1.5rem">Getragen vor, während und nach der Yogastunde – oder einfach im Alltag, um sich selbst näher zu sein.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story-section">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-text">
+        <div class="eyebrow">Hintergrund</div>
+        <h2>Eine Liebesgeschichte</h2>
+        <div class="divider"></div>
+        <p>ES VEDRA ist eine persönliche Sammlung – kuratiert mit Leidenschaft und Umsicht. Jedes Piece wurde ausgewählt, weil es unseren Werten entspricht: Qualität, Nachhaltigkeit, Schönheit.</p>
+        <ul class="story-values">
+          <li>Hochwertige, nachhaltige Materialien</li>
+          <li>Fair produziert und gehandelt</li>
+          <li>Zeitlose Designs statt Trends</li>
+          <li>Unterstützung kleiner Labels</li>
+          <li>Bewusster Konsum</li>
+        </ul>
+      </div>
+      <div style="aspect-ratio:1/1;background:linear-gradient(135deg,var(--terracotta),var(--ocker));border-radius:2px;display:flex;align-items:center;justify-content:center;color:var(--cream);font-size:1.2rem;font-family:'Cormorant Garamond',serif;font-style:italic;">[Bild]</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-fashion">
+  <div class="container">
+    <div class="eyebrow center">Im Studio</div>
+    <h2 class="center">Direkt vor Ort entdecken</h2>
+    <p style="margin:1.5rem auto 2rem">Die komplette ES VEDRA-Kollektion wartet auf dich im Studio Yoga am Hofgarten. Schau vorbei – zum Schauen, Anfassen und Kaufen.</p>
+    <a href="kontakt.html" class="btn">Zu uns kommen</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>Yoga am Hofgarten</h3>
+      <p>Ein Ort der Stille und Achtsamkeit im Herzen von Augsburg. Seit 2012 spezialisiert auf Rückengesundheit.</p>
+    </div>
+    <div>
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="index.html">Studio</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="kurse.html" class="active">Kurse</a></li>
+        <li><a href="raeume.html">Räume</a></li>
+        <li><a href="mode.html">Mode</a></li>
+        <li><a href="mode.html">Mode</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Adresse</h4>
+      <p>Alte Gasse 1<br>86152 Augsburg</p>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <p>Anja Cavallar<br><a href="tel:+491632617777">0163 26 17 777</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 Yoga am Hofgarten · Alle Rechte vorbehalten</div>
+    <div>
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+      <a href="#">AGB</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('nav a').forEach(a=>{
+    a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open'));
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kontakt & Anfahrt – Yoga am Hofgarten Augsburg</title>
+<meta name="description" content="Yoga am Hofgarten, Alte Gasse 1, 86152 Augsburg. Anja Cavallar – 0163 26 17 777. Anfahrt und Parkmöglichkeiten." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Nunito+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .contact-main{background:var(--cream)}
+  .contact-grid{
+    display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start;
+  }
+  .contact-info h2{color:var(--brown)}
+  .contact-info p{color:var(--brown-soft);margin-bottom:1rem}
+
+  .contact-block{
+    padding:1.8rem 0;border-bottom:1px solid var(--line);
+  }
+  .contact-block:last-child{border-bottom:none}
+  .contact-block h3{
+    font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--terracotta);margin-bottom:.8rem;
+    font-family:'Nunito Sans',sans-serif;font-weight:600;
+  }
+  .contact-block .value{
+    font-family:'Cormorant Garamond',serif;font-size:1.4rem;
+    color:var(--brown);font-weight:400;
+  }
+  .contact-block .value a{color:var(--brown)}
+  .contact-block .value a:hover{color:var(--terracotta)}
+  .contact-block .sub{color:var(--brown-soft);font-size:.95rem;margin-top:.3rem}
+
+  .map-wrapper{
+    aspect-ratio:1/1;
+    box-shadow:0 25px 60px rgba(56,43,39,.15);
+    overflow:hidden;position:relative;
+  }
+  .map-wrapper::before{
+    content:'';position:absolute;top:15px;left:15px;right:-15px;bottom:-15px;
+    border:1px solid var(--terracotta);z-index:-1;
+  }
+  .map-wrapper iframe{
+    width:100%;height:100%;border:none;
+    filter:sepia(.2) hue-rotate(-10deg) saturate(.9);
+  }
+
+  .info-blocks{background:var(--cream-warm)}
+  .info-blocks-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem;
+  }
+  .info-block{
+    background:var(--cream);padding:2.5rem 2rem;text-align:center;
+    border:1px solid var(--line);
+  }
+  .info-block-icon{
+    width:60px;height:60px;margin:0 auto 1.5rem;
+    display:flex;align-items:center;justify-content:center;
+    border:1px solid var(--terracotta);border-radius:50%;
+    color:var(--terracotta);font-family:'Cormorant Garamond',serif;
+    font-style:italic;font-size:1.4rem;
+  }
+  .info-block h3{color:var(--brown);font-size:1.3rem;margin-bottom:.5rem}
+  .info-block p{color:var(--brown-soft);font-size:.95rem;margin:0}
+
+  .final-cta{
+    background:var(--brown);color:var(--cream);text-align:center;padding:6rem 2rem;
+  }
+  .final-cta .eyebrow{color:var(--ocker)}
+  .final-cta h2{color:var(--cream);font-style:italic}
+  .final-cta .divider::before{background:var(--brown);color:var(--ocker)}
+  .final-cta p{color:rgba(243,233,219,.85);max-width:600px;margin:0 auto 2rem;font-size:1.1rem}
+
+  @media(max-width:900px){
+    .contact-grid{grid-template-columns:1fr;gap:3rem}
+    .map-wrapper::before{display:none}
+    .info-blocks-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Yoga <span>am</span> Hofgarten</a>
+    <button class="burger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">Studio</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="kurse.html">Kurse</a></li>
+        <li><a href="raeume.html">Räume</a></li>
+        <li><a href="mode.html">Mode</a></li>
+        <li><a href="kontakt.html"class="active">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <div class="container">
+    <div class="eyebrow">Besuchen Sie uns</div>
+    <h1>Kontakt & Anfahrt</h1>
+    <div class="breadcrumb"><a href="index.html">Startseite</a> <span>/</span> Kontakt</div>
+  </div>
+</section>
+
+<!-- CONTACT MAIN -->
+<section class="contact-main">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="eyebrow">Herzlich willkommen</div>
+        <h2>Sprechen wir</h2>
+        <div class="divider"></div>
+        <p>Für Anmeldungen, Rückfragen oder eine unverbindliche Anfrage – rufen Sie einfach an oder schreiben Sie eine Nachricht. Ich freue mich auf Sie.</p>
+
+        <div class="contact-block">
+          <h3>Studio</h3>
+          <div class="value">Yoga am Hofgarten</div>
+          <div class="sub">Alte Gasse 1 · 86152 Augsburg</div>
+        </div>
+
+        <div class="contact-block">
+          <h3>Ansprechpartnerin</h3>
+          <div class="value">Anja Cavallar</div>
+          <div class="sub">Zertifizierte Yogalehrerin & Wirbelsäulentrainerin</div>
+        </div>
+
+        <div class="contact-block">
+          <h3>Telefon</h3>
+          <div class="value"><a href="tel:+491632617777">0163 26 17 777</a></div>
+        </div>
+
+        <div class="contact-block">
+          <h3>Lage</h3>
+          <div class="value">Direkt am Hofgarten</div>
+          <div class="sub">In unmittelbarer Nähe zum Augsburger Dom</div>
+        </div>
+      </div>
+
+      <div class="map-wrapper">
+        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyASzqnCrYBWXhFtdlXXBg_KCLxQTa1I5Y4&q=48.3727,10.89298&center=48.3732123896,10.89298&zoom=16" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFO BLOCKS -->
+<section class="info-blocks">
+  <div class="container">
+    <div class="eyebrow center">Praktische Infos</div>
+    <h2 class="center">Ihr Besuch</h2>
+    <div class="divider" style="margin:1.8rem auto 2.2rem"></div>
+
+    <div class="info-blocks-grid">
+      <div class="info-block">
+        <div class="info-block-icon">P</div>
+        <h3>Parken</h3>
+        <p>Kolpingparkhaus (Jesuitengasse) und Ludwigstraße – jeweils nur 2 Gehminuten vom Studio entfernt.</p>
+      </div>
+      <div class="info-block">
+        <div class="info-block-icon">Ö</div>
+        <h3>ÖPNV</h3>
+        <p>Zentrale Lage in der Augsburger Innenstadt. Vom Hauptbahnhof in wenigen Minuten erreichbar.</p>
+      </div>
+      <div class="info-block">
+        <div class="info-block-icon">Z</div>
+        <h3>Zu Fuß</h3>
+        <p>Direkt am Hofgarten und in unmittelbarer Nähe des Doms – ein idealer Ausgangs- und Ankommensort.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <div class="eyebrow">Einstieg jederzeit</div>
+    <h2>Es ist nie zu spät</h2>
+    <div class="divider" style="margin:1.5rem auto 2rem"></div>
+    <p>Ob Einsteiger*in oder erfahrene*r Yogi*ni – bei Yoga am Hofgarten sind Sie jederzeit herzlich willkommen.</p>
+    <a href="tel:+491632617777" class="btn btn-light">Jetzt anrufen</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>Yoga am Hofgarten</h3>
+      <p>Ein Ort der Stille und Achtsamkeit im Herzen von Augsburg. Seit 2012 spezialisiert auf Rückengesundheit.</p>
+    </div>
+    <div>
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="index.html">Studio</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="kurse.html" class="active">Kurse</a></li>
+        <li><a href="raeume.html">Räume</a></li>
+        <li><a href="mode.html">Mode</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Adresse</h4>
+      <p>Alte Gasse 1<br>86152 Augsburg</p>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <p>Anja Cavallar<br><a href="tel:+491632617777">0163 26 17 777</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 Yoga am Hofgarten · Alle Rechte vorbehalten</div>
+    <div>
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+      <a href="#">AGB</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('nav a').forEach(a=>{
+    a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open'));
+  });
+</script>
+
+</body>
+</html>

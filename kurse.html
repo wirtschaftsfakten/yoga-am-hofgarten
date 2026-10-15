@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kurse – Rückenyoga in Augsburg | Yoga am Hofgarten</title>
+<meta name="description" content="Yoga für einen starken, gesunden Rücken. Kurszeiten, Preise und Wirkung – kleine Gruppen im Studio am Hofgarten." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Nunito+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .schedule{background:var(--cream)}
+  .schedule-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem;
+  }
+  .schedule-card{
+    background:var(--cream-warm);padding:3rem 2rem;text-align:center;
+    border:1px solid var(--line);position:relative;
+    transition:all .35s;
+  }
+  .schedule-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 25px 50px rgba(56,43,39,.12);
+    background:var(--cream);
+  }
+  .schedule-card .day{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;
+    font-size:2.4rem;color:var(--terracotta);margin-bottom:.3rem;line-height:1;
+  }
+  .schedule-card .time{
+    font-size:1.3rem;color:var(--brown);margin:1rem 0 1rem;font-weight:400;
+    font-family:'Cormorant Garamond',serif;
+  }
+  .schedule-card .label{
+    font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--olive);padding-top:1rem;border-top:1px solid var(--line);
+  }
+
+  .content-section{background:var(--cream-warm)}
+  .content-grid{
+    display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:start;
+  }
+  .content-img{
+    aspect-ratio:4/5;
+    background:url('image/Yoga-Raum2.png') center/cover;
+    box-shadow:0 20px 50px rgba(56,43,39,.15);
+  }
+  .content-text h2{color:var(--brown)}
+  .content-text p{color:var(--brown-soft)}
+  .effect-list{list-style:none;margin-top:1.5rem}
+  .effect-list li{
+    padding:1rem 0;border-bottom:1px solid var(--line);
+    display:flex;align-items:flex-start;gap:1rem;color:var(--brown);
+  }
+  .effect-list li::before{
+    content:'✦';color:var(--terracotta);flex-shrink:0;margin-top:.2rem;
+  }
+  .effect-list li:last-child{border-bottom:none}
+
+  .flow{background:var(--cream);text-align:center}
+  .flow-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:3rem;
+    position:relative;
+  }
+  .flow-step{padding:1rem}
+  .flow-num{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:3.5rem;color:var(--ocker);line-height:1;margin-bottom:1rem;
+  }
+  .flow-step h3{font-size:1.2rem;color:var(--brown);margin-bottom:.5rem}
+  .flow-step p{font-size:.95rem;color:var(--brown-soft);margin:0}
+
+  .pricing{
+    background:var(--brown);color:var(--cream);text-align:center;
+  }
+  .pricing h2{color:var(--cream);font-style:italic}
+  .pricing .eyebrow{color:var(--ocker)}
+  .pricing .divider::before{background:var(--brown);color:var(--ocker)}
+  .price-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;
+    max-width:800px;margin:3rem auto 0;
+  }
+  .price-card{
+    padding:3rem 2rem;border:1px solid rgba(243,233,219,.2);
+    background:rgba(243,233,219,.03);
+  }
+  .price-card h3{
+    color:var(--cream);font-size:1.4rem;margin-bottom:1rem;
+    font-family:'Nunito Sans',sans-serif;font-weight:400;
+    letter-spacing:.2em;text-transform:uppercase;font-size:.85rem;
+  }
+  .price-amount{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:4rem;color:var(--ocker);line-height:1;
+  }
+  .price-desc{color:rgba(243,233,219,.7);font-size:.95rem;margin-top:1rem}
+
+  .info-notice{
+    background:var(--cream-warm);text-align:center;padding:4rem 2rem;
+  }
+  .info-notice p{color:var(--brown);font-family:'Cormorant Garamond',serif;
+    font-style:italic;font-size:1.4rem;max-width:700px;margin:0 auto;}
+
+  @media(max-width:900px){
+    .schedule-grid{grid-template-columns:1fr}
+    .content-grid{grid-template-columns:1fr;gap:3rem}
+    .flow-grid{grid-template-columns:1fr 1fr;gap:2rem}
+    .price-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Yoga <span>am</span> Hofgarten</a>
+    <button class="burger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">Studio</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="kurse.html" class="active">Kurse</a></li>
+        <li><a href="raeume.html">Räume</a></li>
+        <li><a href="mode.html">Mode</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <div class="container">
+    <div class="eyebrow">Kursangebot</div>
+    <h1>Yoga für einen starken Rücken</h1>
+    <div class="breadcrumb"><a href="index.html">Startseite</a> <span>/</span> Kurse</div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="schedule center">
+  <div class="container">
+    <div class="eyebrow">Wochenplan</div>
+    <h2>Kurszeiten</h2>
+    <div class="divider"></div>
+    <p style="max-width:640px;margin:0 auto;color:var(--brown-soft)">Kleine Gruppen mit maximal fünf Teilnehmer*innen. Einstieg jederzeit möglich, solange ein Mattenplatz frei ist.</p>
+
+    <div class="schedule-grid">
+      <div class="schedule-card">
+        <div class="day">Dienstag</div>
+        <div class="time">19:00 – 20:00</div>
+        <div class="label">Rückenyoga</div>
+      </div>
+      <div class="schedule-card">
+        <div class="day">Donnerstag</div>
+        <div class="time">19:00 – 20:00</div>
+        <div class="label">Rückenyoga</div>
+      </div>
+      <div class="schedule-card">
+        <div class="day">Sonntag</div>
+        <div class="time">09:45 – 10:45</div>
+        <div class="label">Rückenyoga</div>
+      </div>
+    </div>
+
+    <p style="margin-top:2.5rem;color:var(--brown-soft);font-style:italic">Einzelstunden und Kleingruppentraining individuell nach Vereinbarung.</p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="content-section">
+  <div class="container">
+    <div class="content-grid">
+      <div class="content-img"></div>
+      <div class="content-text">
+        <div class="eyebrow">Was Rückenyoga bewirkt</div>
+        <h2>Kraft & Klarheit</h2>
+        <div class="divider"></div>
+        <p>Rückenyoga verbindet gezielte Übungen mit bewusster Atmung. Das Ergebnis ist eine allgemeine Körperkräftigung – mit besonderem Fokus auf einem gesunden, beweglichen Rücken.</p>
+        <ul class="effect-list">
+          <li>Stärkung, Stabilisierung & Mobilisierung des Rumpfkorsetts</li>
+          <li>Haltungskorrektur</li>
+          <li>Erhöhung der Flexibilität und Bewegungsfreiheit</li>
+          <li>Entspannung für den Geist</li>
+          <li>Wohlfühlen & Harmonisierung des gesamten Organismus</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="flow">
+  <div class="container">
+    <div class="eyebrow">Ablauf</div>
+    <h2>Eine Kursstunde</h2>
+    <div class="divider"></div>
+    <p style="max-width:640px;margin:0 auto;color:var(--brown-soft)">Jede Stunde folgt einer bewusst gestalteten Struktur – von der Ankunft bis zur tiefen Entspannung.</p>
+
+    <div class="flow-grid">
+      <div class="flow-step">
+        <div class="flow-num">01</div>
+        <h3>Ankommen</h3>
+        <p>Atemmeditation zur Einstimmung auf die Yogastunde.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">02</div>
+        <h3>Kräftigen</h3>
+        <p>Rücken-, Bauch- und Beckenbodenmuskulatur, Faszien.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">03</div>
+        <h3>Mobilisieren</h3>
+        <p>Gelenke, Schulter, Nacken – dehnen und öffnen.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">04</div>
+        <h3>Ausklang</h3>
+        <p>Shavasana – die Wirkung der Stunde vertiefen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="container">
+    <div class="eyebrow">Preise</div>
+    <h2>Klar & fair</h2>
+    <div class="divider" style="margin:1.5rem auto 2rem"></div>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>Kleingruppe</h3>
+        <div class="price-amount">20 €</div>
+        <div class="price-desc">pro Stunde<br>max. 5 Teilnehmer*innen</div>
+      </div>
+      <div class="price-card">
+        <h3>Einzelstunde</h3>
+        <div class="price-amount">ab 80 €</div>
+        <div class="price-desc">individuell<br>nach Vereinbarung</div>
+      </div>
+    </div>
+
+    <p style="margin-top:3rem"><a href="kontakt.html" class="btn btn-light">Jetzt Platz sichern</a></p>
+  </div>
+</section>
+
+<!-- NOTICE -->
+<section class="info-notice">
+  <div class="container">
+    <p>„Einstieg zu jedem Zeitpunkt möglich – solange ein Mattenplatz frei ist."</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>Yoga am Hofgarten</h3>
+      <p>Ein Ort der Stille und Achtsamkeit im Herzen von Augsburg. Seit 2012 spezialisiert auf Rückengesundheit.</p>
+    </div>
+    <div>
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="index.html">Studio</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="kurse.html" class="active">Kurse</a></li>
+        <li><a href="raeume.html">Räume</a></li>
+        <li><a href="mode.html">Mode</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Adresse</h4>
+      <p>Alte Gasse 1<br>86152 Augsburg</p>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <p>Anja Cavallar<br><a href="tel:+491632617777">0163 26 17 777</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 Yoga am Hofgarten · Alle Rechte vorbehalten</div>
+    <div>
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+      <a href="#">AGB</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('nav a').forEach(a=>{
+    a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open'));
+  });
+</script>
+
+</body>
+</html>

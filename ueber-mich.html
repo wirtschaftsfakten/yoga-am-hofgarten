@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Über mich – Anja Cavallar | Yoga am Hofgarten Augsburg</title>
+<meta name="description" content="Anja Cavallar – zertifizierte Yogalehrerin für den Rücken, Wirbelsäulentrainerin und Hormonyogalehrerin in Augsburg." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Nunito+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .about-hero{background:var(--cream)}
+  .about-grid{
+    display:grid;grid-template-columns:1fr 1.3fr;gap:5rem;align-items:center;
+  }
+  .about-img{
+    aspect-ratio:4/5;overflow:hidden;
+    box-shadow:0 25px 70px rgba(56,43,39,.2);
+    position:relative;
+  }
+  .about-img::before{
+    content:'';position:absolute;top:20px;left:20px;right:-20px;bottom:-20px;
+    border:1px solid var(--terracotta);z-index:-1;
+  }
+  .about-img img{width:100%;height:100%;object-fit:cover}
+  .about-text p{color:var(--brown-soft);margin-bottom:1.2rem}
+  .signature{
+    margin-top:2rem;font-family:'Cormorant Garamond',serif;font-size:1.8rem;
+    font-style:italic;color:var(--terracotta);
+  }
+
+  .credentials-section{background:var(--cream-warm);text-align:center}
+  .creds-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem;
+  }
+  .cred{
+    background:var(--cream);padding:3rem 2rem;
+    border:1px solid var(--line);
+    transition:transform .3s;
+  }
+  .cred:hover{transform:translateY(-5px)}
+  .cred-num{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:3rem;color:var(--ocker);line-height:1;margin-bottom:1rem;
+  }
+  .cred h3{font-size:1.3rem;color:var(--brown);margin-bottom:.5rem}
+  .cred p{color:var(--brown-soft);font-size:.95rem;margin:0}
+
+  .values{background:var(--cream)}
+  .values-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:3rem 4rem;margin-top:3rem;
+  }
+  .value{border-left:2px solid var(--terracotta);padding-left:1.5rem}
+  .value h3{font-size:1.4rem;color:var(--brown);margin-bottom:.6rem;font-style:italic}
+  .value p{color:var(--brown-soft);margin:0}
+
+  .philosophy-block{
+    background:var(--brown);color:var(--cream);text-align:center;
+  }
+  .philosophy-block .eyebrow{color:var(--ocker)}
+  .philosophy-block h2{color:var(--cream);font-style:italic}
+  .philosophy-block .divider::before{background:var(--brown);color:var(--ocker)}
+  .philosophy-block p{color:rgba(243,233,219,.85);max-width:750px;margin:0 auto 1.2rem;font-size:1.1rem}
+
+  @media(max-width:900px){
+    .about-grid{grid-template-columns:1fr;gap:3rem}
+    .about-img::before{display:none}
+    .creds-grid,.values-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Yoga <span>am</span> Hofgarten</a>
+    <button class="burger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">Studio</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="kurse.html" class="active">Kurse</a></li>
+        <li><a href="raeume.html">Räume</a></li>
+        <li><a href="mode.html">Mode</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <div class="container">
+    <div class="eyebrow">Kennenlernen</div>
+    <h1>Über mich</h1>
+    <div class="breadcrumb"><a href="index.html">Startseite</a> <span>/</span> Über mich</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-hero">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img">
+        <img src="image/Anja-Cavallar.png" alt="Anja Cavallar" />
+      </div>
+      <div class="about-text">
+        <div class="eyebrow">Namaste</div>
+        <h2>Anja Cavallar</h2>
+        <div class="divider"></div>
+        <p>Yoga ist für alle da – unabhängig von Alter, Erfahrung oder Beweglichkeit. Diese Überzeugung trägt meine gesamte Arbeit, seit ich 2012 das Studio Yoga am Hofgarten in Augsburg gegründet habe.</p>
+        <p>Ich unterrichte mit langjähriger Erfahrung und großer Achtsamkeit – individuell, bodenständig und undogmatisch. Ein besonderer Fokus meiner Arbeit liegt auf der Rückengesundheit, dem Aufbau von Körperbewusstsein und der harmonischen Verbindung von Atem und Bewegung.</p>
+        <p>Der Körper gewinnt an Stabilität durch Bewegung – der Geist an Klarheit durch Stille. Diese Balance wirkt heilsam und stärkt uns für den Alltag.</p>
+        <p>Ob Einsteiger*in oder erfahrene*r Yogi*ni – bei Yoga am Hofgarten sind Sie jederzeit herzlich willkommen. Denn: Es ist nie zu spät, mit Yoga zu beginnen.</p>
+        <div class="signature">Namaste, Anja</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section class="credentials-section">
+  <div class="container">
+    <div class="eyebrow">Qualifikationen</div>
+    <h2>Ausbildung & Zertifizierungen</h2>
+    <div class="divider"></div>
+    <p style="max-width:600px;margin:0 auto;color:var(--brown-soft)">Über zehn Jahre Erfahrung in der Vermittlung eines achtsamen, körpergesunden Yoga-Weges.</p>
+
+    <div class="creds-grid">
+      <div class="cred">
+        <div class="cred-num">01</div>
+        <h3>Rückenyoga</h3>
+        <p>Zertifizierte Yogalehrerin, spezialisiert auf Rückengesundheit und Haltungskorrektur.</p>
+      </div>
+      <div class="cred">
+        <div class="cred-num">02</div>
+        <h3>Wirbelsäule</h3>
+        <p>Ausgebildete Wirbelsäulentrainerin – für gezielte Mobilisierung und Stabilisierung.</p>
+      </div>
+      <div class="cred">
+        <div class="cred-num">03</div>
+        <h3>Hormonyoga</h3>
+        <p>Zertifizierte Hormonyogalehrerin – sanfte Begleitung durch alle Lebensphasen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <div class="container">
+    <div class="eyebrow center">Meine Werte</div>
+    <h2 class="center">Wie ich unterrichte</h2>
+    <div class="divider" style="margin:1.8rem auto 2.2rem"></div>
+
+    <div class="values-grid">
+      <div class="value">
+        <h3>Individuell</h3>
+        <p>Jede Stunde wird auf die Teilnehmer*innen abgestimmt – auf ihre Tages-Verfassung, ihre Bedürfnisse, ihre Ziele.</p>
+      </div>
+      <div class="value">
+        <h3>Achtsam</h3>
+        <p>Bewusstes Atmen, ruhige Präsenz und ein achtsamer Umgang mit dem eigenen Körper stehen im Zentrum.</p>
+      </div>
+      <div class="value">
+        <h3>Bodenständig</h3>
+        <p>Ohne Dogmen, ohne Show – Yoga so, wie es Ihnen im Alltag wirklich hilft: stabil, ehrlich, wirksam.</p>
+      </div>
+      <div class="value">
+        <h3>Persönlich</h3>
+        <p>Kleine Gruppen mit maximal fünf Teilnehmer*innen. Einzelstunden nach Vereinbarung – für echte Nähe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy-block">
+  <div class="container">
+    <div class="eyebrow">Meine Philosophie</div>
+    <h2>Balance zwischen Bewegung und Stille</h2>
+    <div class="divider" style="margin:1.5rem auto 2rem"></div>
+    <p>Yoga ist für mich mehr als eine Übungspraxis – es ist ein Weg, dem eigenen Körper zuzuhören und dem Geist Raum zu geben. In einer Zeit, in der alles schneller wird, ist ein Studio wie dieses ein bewusster Gegenpol: klein, still, echt.</p>
+    <p style="margin-top:2rem"><a href="kurse.html" class="btn btn-light">Zu den Kursen</a></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>Yoga am Hofgarten</h3>
+      <p>Ein Ort der Stille und Achtsamkeit im Herzen von Augsburg. Seit 2012 spezialisiert auf Rückengesundheit.</p>
+    </div>
+    <div>
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="index.html">Studio</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="kurse.html" class="active">Kurse</a></li>
+        <li><a href="raeume.html">Räume</a></li>
+        <li><a href="mode.html">Mode</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Adresse</h4>
+      <p>Alte Gasse 1<br>86152 Augsburg</p>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <p>Anja Cavallar<br><a href="tel:+491632617777">0163 26 17 777</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 Yoga am Hofgarten · Alle Rechte vorbehalten</div>
+    <div>
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+      <a href="#">AGB</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('nav a').forEach(a=>{
+    a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open'));
+  });
+</script>
+
+</body>
+</html>
