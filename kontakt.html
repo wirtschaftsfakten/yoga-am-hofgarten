@@ -5,9 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Kontakt & Anfahrt – Yoga am Hofgarten Augsburg</title>
 <meta name="description" content="Yoga am Hofgarten, Alte Gasse 1, 86152 Augsburg. Anja Cavallar – 0163 26 17 777. Anfahrt und Parkmöglichkeiten." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Nunito+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
 <link rel="stylesheet" href="style.css">
 <style>
   .contact-main{background:var(--cream)}
@@ -43,9 +41,18 @@
     content:'';position:absolute;top:15px;left:15px;right:-15px;bottom:-15px;
     border:1px solid var(--terracotta);z-index:-1;
   }
-  .map-wrapper iframe{
-    width:100%;height:100%;border:none;
-    filter:sepia(.2) hue-rotate(-10deg) saturate(.9);
+  .map-link{
+    width:100%;height:100%;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:1.2rem;text-align:center;
+    background:var(--cream-warm);color:var(--brown);text-decoration:none;
+    transition:background .3s;
+  }
+  .map-link:hover{background:var(--cream)}
+  .map-pin{font-size:2.4rem;color:var(--terracotta)}
+  .map-title{font-family:'Cormorant Garamond',serif;font-size:1.8rem;line-height:1.3}
+  .map-cta{
+    font-size:.78rem;letter-spacing:.25em;text-transform:uppercase;
+    color:var(--terracotta);font-weight:600;
   }
 
   .info-blocks{background:var(--cream-warm)}
@@ -144,7 +151,11 @@
       </div>
 
       <div class="map-wrapper">
-        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyASzqnCrYBWXhFtdlXXBg_KCLxQTa1I5Y4&q=48.3727,10.89298&center=48.3732123896,10.89298&zoom=16" loading="lazy"></iframe>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Alte+Gasse+1,+86152+Augsburg" target="_blank" rel="noopener">
+          <span class="map-pin">◉</span>
+          <span class="map-title">Alte Gasse 1<br>86152 Augsburg</span>
+          <span class="map-cta">Route in Google Maps öffnen →</span>
+        </a>
       </div>
     </div>
   </div>
@@ -217,9 +228,8 @@
   <div class="footer-bottom">
     <div>© 2026 Yoga am Hofgarten · Alle Rechte vorbehalten</div>
     <div>
-      <a href="#">Impressum</a>
-      <a href="#">Datenschutz</a>
-      <a href="#">AGB</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
     </div>
   </div>
 </footer>
